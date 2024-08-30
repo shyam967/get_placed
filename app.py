@@ -45,8 +45,16 @@ st.markdown("""
         font-size: 1.2em;
         margin-bottom: 2rem;
     }
+    /* Add CSS to hide the 'Manage app' link */
+    .streamlit-expanderHeader {
+        display: none;  /* Hide the expander header */
+    }
+    .css-styles_terminalButton__JBj5T {
+        display: none;  /* This is an example class; replace it with the correct one */
+    }
     </style>
     """, unsafe_allow_html=True)
+
 
 # Top Navigation Menu
 st.markdown("<h1 class='title'>Graduate Admission Predictor</h1>", unsafe_allow_html=True)
