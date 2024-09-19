@@ -19,22 +19,14 @@ colleges_df = pd.read_csv('mtech_colleges.csv')
 # Add custom CSS for full screen and alignment
 st.markdown("""
     <style>
-    .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .block-container {
-        padding: 0 2rem;
-    }
-    #MainMenu {visibility: hidden;}
-    header {visibility: hidden;}
-    .css-1d391kg {padding-top: 4rem;}  /* Adjust this value if needed */
-    .center-text {
-        text-align: center;
+    /* General page styling */
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
     }
     .title {
-        font-size: 2.5em;
+        font-size: 3em;
         color: #4CAF50;
         text-align: center;
         margin-top: 0;
@@ -44,16 +36,73 @@ st.markdown("""
         text-align: center;
         font-size: 1.2em;
         margin-bottom: 2rem;
+        color: #666;
     }
-    /* Add CSS to hide the 'Manage app' link */
-    .streamlit-expanderHeader {
-        display: none;  /* Hide the expander header */
+
+    /* Adjust the padding and margin for a cleaner layout */
+    .block-container {
+        padding: 0 3rem;
     }
-    .css-styles_terminalButton__JBj5T {
-        display: none;  /* This is an example class; replace it with the correct one */
+    .stButton button {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1.2em;
+        border-radius: 8px;
+        padding: 0.5em 1em;
+        transition: background-color 0.3s ease;
     }
+    .stButton button:hover {
+        background-color: #45a049;
+    }
+
+    /* Style input fields */
+    input[type=number], select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=number]:focus, select:focus {
+        border-color: #4CAF50;
+        box-shadow: 0 0 8px 0 rgba(76, 175, 80, 0.5);
+    }
+
+    /* Hover effects for the recommendation list */
+    .recommended-colleges {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .recommended-colleges li {
+        background-color: #fff;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .recommended-colleges li:hover {
+        background-color: #f0f8ff;
+    }
+
+    /* Footer styling */
+    footer {
+        font-size: 0.9em;
+        text-align: center;
+        padding: 2em;
+        background-color: #f4f4f9;
+        color: #999;
+    }
+
+    /* Hide the unnecessary UI components */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
     </style>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 
 # Top Navigation Menu
