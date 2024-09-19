@@ -106,7 +106,7 @@ st.markdown("""
 
 
 # Top Navigation Menu
-st.markdown("<h1 class='title'>Graduate Admission Predictor</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='title'>Get Placed</h1>", unsafe_allow_html=True)
 st.markdown("<p class='description'>This application predicts the chance of a student's admission to graduate school based on various parameters. Fill in the details below and click 'Predict' to see the results.</p>", unsafe_allow_html=True)
 
 # Layout with two columns: left for input, right for results
